@@ -17,9 +17,19 @@
         </li>
       </ng-template>
       </ul>
-      <ng-template [ngIf]="onlyOdd">
-        <p>Only odd</p>
+      <!-- <ng-template [ngIf]="onlyOdd">
+        <p app-basic-directive>Only odd</p>
+        <p appBetterHighlightDirective ="yellow" [defaultColor]="'red'"> This is better</p>
+      </ng-template> -->
+      <ng-template [appUnlessDirective]="!onlyOdd">
+        <p app-basic-directive>Only odd</p>
+        <p appBetterHighlightDirective ="yellow" [defaultColor]="'red'"> This is better</p>
       </ng-template>
+      <div [ngSwitch]='value'>
+        <p *ngSwitchCase="10">10</p>
+        <p *ngSwitchCase="5"> 5 </p>
+        <p *ngSwitchDefault="default"> default </p>
+      </div>
     </div>
   </div>
 </div>
