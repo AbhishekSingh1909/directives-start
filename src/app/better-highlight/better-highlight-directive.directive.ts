@@ -13,6 +13,8 @@ export class BetterHighlightDirectiveDirective implements OnInit {
 
   constructor(private elementRef : ElementRef, private rendera : Renderer2) { }
   ngOnInit(): void {
+    //set default color once page has initiated 
+    this.backGroundColor = this.defaultColor;
     // this.rendera.setStyle(this.elementRef.nativeElement,'background-color',  'blue');
     // this.rendera.setStyle(this.elementRef.nativeElement,'color',  'white');
   }
@@ -21,7 +23,7 @@ export class BetterHighlightDirectiveDirective implements OnInit {
     // this.rendera.setStyle(this.elementRef.nativeElement,'background-color',  'blue');
     // this.rendera.setStyle(this.elementRef.nativeElement,'color',  'white');
     this.backGroundColor = this.highlightColor;
-    this.textColor ='white';
+    this.textColor ='blue';
   }
 
   @HostListener('mouseleave') mouseleave() {

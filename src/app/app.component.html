@@ -23,7 +23,7 @@
       </ng-template> -->
       <ng-template [appUnlessDirective]="!onlyOdd">
         <p app-basic-directive>Only odd</p>
-        <p appBetterHighlightDirective ="yellow" [defaultColor]="'red'"> This is better</p>
+        <p [appBetterHighlightDirective] ="'yellow'" [defaultColor]="'red'"> This is better</p>
       </ng-template>
       <div [ngSwitch]='value'>
         <p *ngSwitchCase="10">10</p>
